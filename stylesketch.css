@@ -1,0 +1,22 @@
+body{
+    max-width: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #5a95a1;
+}
+
+#container{
+display:flex;
+align-items: center;
+justify-content: space-around;
+flex-flow: wrap;
+width: 960px;
+height: 960px;
+}
+
+#square{
+    border:solid 1px lightgrey;
+    margin: 0;
+    flex-grow: 1;
+}
