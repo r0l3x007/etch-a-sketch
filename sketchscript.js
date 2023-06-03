@@ -31,7 +31,29 @@ function drawSq(num){
         squareBox.style.backgroundColor = "grey";
         contElem.appendChild(squareBox);
         squareBox.addEventListener("mouseover", function(){
-            squareBox.style.backgroundColor = "red";
+            squareBox.style.backgroundColor = randomHexcol();
         })
     }
+}
+
+
+function randomInteger(max){
+    return Math.floor(Math.random()*(max + 1));
+}
+
+function randomRgbCol(){
+    let r = randomInteger(255);
+    let g = randomInteger(255);
+    let b = randomInteger(255);
+
+    return [r,g,b];
+}
+
+function randomHexcol(){
+    let [r,g,b] = randomRgbCol();
+    let hr = r.toString(16).padStart(2,`0`);
+    let hg = g.toString(16).padStart(2,`0`);
+    let hb = b.toString(16).padStart(2,`0`);
+
+    return "#" + hr + hg + hb;
 }

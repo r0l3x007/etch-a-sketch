@@ -1,9 +1,10 @@
 body{
-    max-width: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: #5a95a1;
+    background: rgb(34,195,152);
+    background: linear-gradient(0deg, rgba(34,195,152,1) 0%, rgba(45,137,253,1) 100%);
 }
 
 #container{
