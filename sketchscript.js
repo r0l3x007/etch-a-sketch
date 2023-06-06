@@ -1,6 +1,3 @@
-
-
-
 //Button prompting the user for the grid layout
 const btn = document.querySelector(`#button1`);
 let num1 = btn.addEventListener(`click`, getNum);
@@ -70,6 +67,25 @@ function drawSq(num){
         })
     }
 }
+
+
+
+//Shading button, with each pass adds 10% of black to the existing color
+
+/*const scaleColor =  document.querySelector(`#button4`);
+const scaleBtn =  scaleColor.addEventListener(`click`, shadeImage);
+
+function shadeImage(){
+    const shadeBox = document.querySelectorAll(`#square`);
+    if(shadeBox.length > 0){
+        for(let i = 0; i < shadeBox.length; i++){
+            shadeBox[i].addEventListener(`mouseover`, function(){
+                shadeBox[i].style.filter  = `brightness(0.9)`;
+            })
+        }
+    }
+}*/
+
 
 //random color generator
 function randomInteger(max){
