@@ -1,6 +1,10 @@
+
+
+
+//Button prompting the user for the grid layout
 const btn = document.querySelector(`#button1`);
 let num1 = btn.addEventListener(`click`, getNum);
-
+//function handling the reset of the grid layout and accepting new input
 function getNum(){
     num1 = prompt(`enter a number`);
     if(num1 <= 100 && num1 > 0){
@@ -14,10 +18,41 @@ function getNum(){
     }
 }
 
+
+//Resetting canvas button
+const rstBtn =  document.querySelector(`#button3`);
+let rstFn =  rstBtn.addEventListener(`click` , resetCanvas );
+
+
+function resetCanvas(){
+    const squareSum = document.querySelectorAll(`#square`);
+    if(squareSum.length > 0){
+        for (let i = 0; i < squareSum.length; i ++ ){
+            squareSum[i].remove();
+        }
+    }
+    drawSq(num1);
+}
+
+//Button that activates rainbow mode
+const rnbBtn = document.querySelector(`#button2`);
+const checKer = rnbBtn.addEventListener(`click`, rainbowCol);
+
+
+function rainbowCol(){
+    const colorBox = document.querySelectorAll(`#square`);
+    if(colorBox.length > 0){
+        for(let i = 0; i < colorBox.length; i ++){
+            colorBox[i].addEventListener("mouseover", function(){
+                colorBox[i].style.backgroundColor = randomHexcol();
+            })
+        }
+    }
+}
+
 //need to make a function that generates a set number of divs
-
+//main function drawing the squares
 const contElem =  document.querySelector(`#container`);
-
 
 function drawSq(num){
 
@@ -28,15 +63,15 @@ function drawSq(num){
         const widthAndHeight = (960 -((num * 2))) / num;
         squareBox.style.width = `${widthAndHeight}px`;
         squareBox.style.height = `${widthAndHeight}px`;
-        squareBox.style.backgroundColor = "grey";
+        squareBox.style.backgroundColor = "lightgrey";
         contElem.appendChild(squareBox);
         squareBox.addEventListener("mouseover", function(){
-            squareBox.style.backgroundColor = randomHexcol();
+            squareBox.style.backgroundColor = `green`;
         })
     }
 }
 
-
+//random color generator
 function randomInteger(max){
     return Math.floor(Math.random()*(max + 1));
 }

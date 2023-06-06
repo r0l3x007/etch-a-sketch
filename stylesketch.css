@@ -3,21 +3,48 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
+    font-family: sans-serif;
     background: rgb(34,195,152);
     background: linear-gradient(0deg, rgba(34,195,152,1) 0%, rgba(45,137,253,1) 100%);
 }
+.header{
+font-size: 30px;
+color:rgb(214, 201, 183);
+}
+
+button{
+/*border: 1px solid rgb(214, 201, 183);*/
+width:100px;
+height: 40px;
+margin: 20px;
+border-radius: 25px;
+text-align: center;
+}
+
+#button1, #button2, #button3, #button4{
+    border: solid 5px rgb(144, 238, 202);
+    border-radius: 25px;
+    transition: border-width 0.3s linear;
+}
+
+#button1:hover,#button2:hover,#button3:hover,#button4:hover{
+    border-width: 8px;
+}
+
+
 
 #container{
 display:flex;
 align-items: center;
 justify-content: space-around;
 flex-flow: wrap;
+background-color: lightgray;
 width: 960px;
 height: 960px;
 }
 
 #square{
-    border:solid 1px lightgrey;
+    border:solid 1px rgb(255, 255, 255);
     margin: 0;
     flex-grow: 1;
 }
