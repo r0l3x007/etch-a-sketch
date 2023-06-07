@@ -35,17 +35,19 @@ text-align: center;
 
 
 #container{
-display:flex;
-align-items: center;
-justify-content: space-around;
-flex-flow: wrap;
-background-color: lightgray;
-width: 960px;
-height: 960px;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: wrap;
+    background-color: lightgray;
+    width: 960px;
+    height: 960px;
+    
 }
 
 #square{
     border:solid 1px rgb(255, 255, 255);
-    margin: 0;
+    padding:0;
     flex-grow: 1;
+    box-sizing: border-box;
 }

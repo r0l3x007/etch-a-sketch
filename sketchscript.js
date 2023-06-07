@@ -57,9 +57,12 @@ function drawSq(num){
         let squareBox = document.createElement(`div`);
         squareBox.classList.add(`square`);
         squareBox.setAttribute(`id`,`square`);
-        const widthAndHeight = (960 -((num * 2))) / num;
-        squareBox.style.width = `${widthAndHeight}px`;
-        squareBox.style.height = `${widthAndHeight}px`;
+        let rangare = 960/num;
+        squareBox.style.width = rangare + `px`;
+        squareBox.style.height = rangare + `px`;
+        //const widthAndHeight =(960 -((num * 2))) / num;
+        //squareBox.style.width = `${widthAndHeight}px`;
+        //squareBox.style.height = `${widthAndHeight}px`;
         squareBox.style.backgroundColor = "lightgrey";
         contElem.appendChild(squareBox);
         squareBox.addEventListener("mouseover", function(){
